@@ -1,0 +1,15 @@
+<h1><%= @chart.full_name %></h1><br><br>
+<div>
+  <h2>Birthday Number: <%= link_to "#{@chart.birthday_number}", birthday_path(@chart.birthday) %></h2>
+  <p><%= @chart.birthday.long_description %></p>
+</div>
+<div class="">
+  <h2>Life Path Number: <%= link_to "#{@chart.life_path_number}", life_path_path(@chart.life_path) %></h2><br>
+  <p><%= @chart.life_path.short_description %></p>
+</div>
+<h2>Soul Urge Number: <%= link_to "#{@chart.soul_urge_number}", soul_urge_path(@chart.soul_urge) %></h2><br>
+<h2>Soul Urge Challenge Number: <%= link_to "#{@chart.soul_urge_challenge_number}", soul_urge_challenge_path(@chart.soul_urge_challenge) %></h2><br>
+<h2>Expression Number <%= @chart.expression_number %></h2><br>
+<h2>Expression Challenge Number <%= @chart.expression_challenge_number %></h2><br>
+<h2>Personality Number: <%= @chart.personality_number %> </h2><br>
+<h2>Personality Challenge Number <%= @chart.personality_challenge_number %></h2><br>

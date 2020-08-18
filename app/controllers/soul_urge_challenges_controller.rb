@@ -1,0 +1,2 @@
+class SoulUrgeChallengesController < ApplicationController
+end

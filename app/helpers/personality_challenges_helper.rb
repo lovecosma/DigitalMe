@@ -1,0 +1,2 @@
+module PersonalityChallengesHelper
+end

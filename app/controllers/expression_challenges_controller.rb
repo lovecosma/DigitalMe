@@ -1,0 +1,2 @@
+class ExpressionChallengesController < ApplicationController
+end
