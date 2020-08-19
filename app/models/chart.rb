@@ -47,7 +47,7 @@ class Chart < ApplicationRecord
   def soul_urge_challenge_number
     first_vowel = full_name.chars.find{|c|vowel?(c)}
     last_vowel = full_name.reverse.chars.find{|c|vowel?(c)}
-    absolute(get_char_value(first_vowel)-get_char_value(last_vowel))
+    reduce(absolute(get_char_value(first_vowel)-get_char_value(last_vowel)))
   end
 
   def expression_number

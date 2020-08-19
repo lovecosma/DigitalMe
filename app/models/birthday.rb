@@ -11,7 +11,7 @@ class Birthday < ApplicationRecord
     elsif self.number == 3
     "Expression comes naturally to you. You are very skilled at communicating your thoughts through conversation and creative pursuits, and your upbeat, charismatic presence inspires others to get onboard with your ideas."
     elsif self.number == 4
-    "With a 4 Birthday number, you bring stability and rationality to any situation. You are the rock and your hard work and perseverance make you a dependable friend, colleague, parent, and partner."
+    "With a 4 Birthday number, you bring stability and rationality to any situation. \n You are the rock and your hard work and perseverance make you a dependable friend, colleague, parent, and partner."
     elsif self.number == 5
     "Flexibility is your forte. When life throws you a curveball, you can easily adapt to new circumstances and find excitement in the unexpected change. This ability to turn on a dime gives you the power to jump on brief opportunities others may miss."
     elsif self.number == 6
