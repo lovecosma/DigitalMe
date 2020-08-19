@@ -13,21 +13,21 @@
 </div>
 <div class="">
   <h2>Soul Urge Challenge Number: <%= link_to "#{@chart.soul_urge_challenge_number}", soul_urge_challenge_path(@chart.soul_urge_challenge) %></h2>
-  <p><%= @chart.soul_urge_challenge.short_description %></p><br>
+  <p><%= @chart.soul_urge_challenge.short_description %></p>
 </div>
 <div class="">
-  <h2>Expression Number <%= @chart.expression_number %></h2>
-  <p><%= @chart.expression.short_description %></p><br>
+  <h2>Expression Number <%= link_to @chart.expression_number, expression_path(@chart.expression) %></h2>
+  <p><%= @chart.expression.short_description %></p>
 </div>
 <div class="">
-  <h2>Expression Challenge Number <%= @chart.expression_challenge_number %></h2>
-  <p><%= @chart.expression_challenge.short_description %></p><br>
+  <h2>Expression Challenge Number <%= link_to @chart.expression_challenge_number, expression_challenge_path(@chart.expression_challenge) %></h2>
+  <p><%= @chart.expression_challenge.short_description %></p>
 </div>
 <div class="">
-  <h2>Personality Number: <%= @chart.personality_number %> </h2>
-  <p><%= @chart.personality.short_description %></p><br>
+  <h2>Personality Number: <%= link_to @chart.personality_number, personality_path(@chart.personality) %> </h2>
+  <p><%= @chart.personality.short_description %></p>
 </div>
 <div class="">
-  <h2>Personality Challenge Number <%= @chart.personality_challenge_number %></h2>
-  <p><%= @chart.personality_challenge.short_description %></p><br>
+  <h2>Personality Challenge Number <%= link_to @chart.personality_challenge_number, personality_challenge_path(@chart.personality_challenge) %></h2>
+  <p><%= @chart.personality_challenge.short_description %></p>
 </div>
