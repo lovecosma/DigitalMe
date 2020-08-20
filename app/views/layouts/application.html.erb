@@ -11,8 +11,18 @@
 
   <body>
     <nav>
-      <a href="/charts">Charts</a><br>
-      <a href="/charts/new">Create New Chart</a>
+      <!-- Neuatral Links -->
+      <a href="/">Home</a><br>
+      <!-- Logged Out -->
+      <% if !logged_in? %>
+      <%= link_to "Login", login_path %><br>
+      <%= link_to "Sign up", signup_path %><br>
+      <!-- Logged In -->
+      <% else %>
+      <%= link_to "Your Charts", user_charts_path(current_user) %><br>
+      <%= link_to "Create New Chart", new_user_chart_path(current_user) %><br>
+      <%= "Hi, #{current_user.first_name}" %><%="    "%><%= link_to "(Not you?)", logout_path, method: "delete" %><br>
+      <% end %>
     </nav>
     <%= yield %>
   </body>

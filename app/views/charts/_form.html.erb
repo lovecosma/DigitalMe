@@ -1,4 +1,4 @@
-<%= form_for chart do |f| %>
+<%= form_for([current_user, chart]) do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %><br>
   <%= f.label :middle_name %>

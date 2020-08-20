@@ -8,6 +8,10 @@ class Chart < ApplicationRecord
   belongs_to :expression_challenge
   belongs_to :personality
   belongs_to :personality_challenge
+  validates_presence_of :first_name
+  validates_presence_of :middle_name
+  validates_presence_of :last_name
+  validates_presence_of :birthdate
 
   PYTHAG_ALPHA = [
   ['A', 1], ['J', 10], ['S', 19],

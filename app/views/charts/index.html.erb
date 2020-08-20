@@ -1,7 +1,8 @@
 <h1>Your Charts</h1>
 <% @charts.each do |s| %>
 <div class="">
-  <h3><%= link_to "#{s.full_name}", chart_path(s) %></h3>
-  <h4><%= link_to "edit", edit_chart_path(s)%></h4>
+  <h3><%= link_to "#{s.full_name}", user_chart_path(current_user,s) %></h3>
+  <%= link_to "edit", edit_user_chart_path(current_user, s) %>
+  <%= link_to "delete", user_chart_path(current_user, s), method: "delete" %>
 </div>
 <% end %>

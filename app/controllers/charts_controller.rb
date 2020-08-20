@@ -12,8 +12,7 @@ class ChartsController < ApplicationController
 
   def create
 
-    @chart = Chart.new(chart_params)
-    @chart.user = User.new
+    @chart = current_user.charts.build(chart_params)
     @chart.birthday = Birthday.find_by(number: @chart.birthday_number)
     @chart.life_path = LifePath.find_by(number: @chart.life_path_number)
     @chart.soul_urge = SoulUrge.find_by(number: @chart.soul_urge_number)
@@ -23,7 +22,7 @@ class ChartsController < ApplicationController
     @chart.personality = Personality.find_by(number: @chart.personality_number)
     @chart.personality_challenge = PersonalityChallenge.find_by(number: @chart.personality_challenge_number)
     if @chart.save
-      redirect_to chart_path(@chart)
+      redirect_to user_chart_path(current_user, @chart)
     else
       render :new
     end
@@ -42,7 +41,7 @@ class ChartsController < ApplicationController
     set_chart
     @chart.update(chart_params)
     if @chart.save
-      redirect_to chart_path(@chart)
+      redirect_to user_chart_path(current_user, @chart)
     else
       render :edit
     end
@@ -50,7 +49,7 @@ class ChartsController < ApplicationController
 
   def destroy
       set_chart.destroy
-      redirect_to charts_path
+      redirect_to user_charts_path
     end
 
 
