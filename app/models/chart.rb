@@ -30,7 +30,7 @@ class Chart < ApplicationRecord
   end
 
   def life_path_number
-    reduce(reduce(month) + reduce(day) + reduce(year))
+    return_or_reduce(reduce(month) + reduce(day) + reduce(year))
   end
 
   def soul_urge_number
@@ -47,7 +47,7 @@ class Chart < ApplicationRecord
   def soul_urge_challenge_number
     first_vowel = full_name.chars.find{|c|vowel?(c)}
     last_vowel = full_name.reverse.chars.find{|c|vowel?(c)}
-    reduce(absolute(get_char_value(first_vowel)-get_char_value(last_vowel)))
+    return_or_reduce(absolute(get_char_value(first_vowel)-get_char_value(last_vowel)))
   end
 
   def expression_number
@@ -59,7 +59,7 @@ class Chart < ApplicationRecord
   end
 
   def expression_challenge_number
-    soul_urge_challenge_number + personality_challenge_number
+    return_or_reduce(soul_urge_challenge_number + personality_challenge_number)
   end
 
   def personality_number
@@ -76,7 +76,7 @@ class Chart < ApplicationRecord
   def personality_challenge_number
     first_consonant = full_name.chars.find{|c|!vowel?(c)}
     last_consonant = full_name.reverse.chars.find{|c|!vowel?(c)}
-    absolute(get_char_value(first_consonant)-get_char_value(last_consonant))
+    return_or_reduce(absolute(get_char_value(first_consonant)-get_char_value(last_consonant)))
   end
 
   def day

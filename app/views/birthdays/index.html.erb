@@ -1,0 +1,7 @@
+<% @birthdays.each do |b| %>
+<div class="">
+  <h3> <%= link_to "Birthday Number #{b.number}", birthday_path(b) %></h3>
+  <p><%= b.short_description %></p>
+</div>
+
+<% end %>

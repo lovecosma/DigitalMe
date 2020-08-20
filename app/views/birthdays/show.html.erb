@@ -1,0 +1,11 @@
+<h1> Birthday Number <%= @birthday.number %> </h1>
+<br>
+<div class="">
+  <%= @birthday.short_description %>
+</div>
+<br>
+<% @birthday.long_description.each do |d| %>
+  <div class="">
+    <p> <%= d %> </p>
+  </div>
+<% end %>

@@ -28,6 +28,8 @@ class ExpressionChallenge < ApplicationRecord
 "If expressed in a negative manner, the 22 may accentuate unorthodox methods to the point of eccentricity. This negative expression can also be very dominating and overbearing."
   elsif self.number == 33
 "When not expressing at their highest, the Destiny Number 33 can over-give, becoming drained and depleted. Without proper boundaries in place, they take on too much responsibility and not enough support. Similarly to Expression 6, this Master Number can take on traits of the typical martyr. With perfectionism and controlling tendencies, they can struggle to let go and allow other people to take some of the strain. And this compounds their inability to express themselves authentically and creatively! Yet if they can let go, learn to embrace a little chaos in their lives and allow others to take care of themselves for a change (are you listening, Destiny Number 33?!) they may just find this is the moment their creativity can shine. With both the number 3 and the number 6 combined in their chart, the person with this numerology can struggle with the duality of finding their own voice, and putting other people first. It’s a tricky line to walk, and there’s no “right way” to do it. Yet with practice, this person will find a way to express their gifts in the world so as to bring their true gifts through, and serve the vision of the New Earth in the process."
+  elsif self.number == 0
+"Zero as a challenge number doesn’t identify one special challenge that would be more important than others. Any type of challenge can be encountered, but regardless of their type they are meant to guide you to find your strength. This number challenge speaks about your ability to become self-sufficient and independent and whole as a person."
   end
 
   end
@@ -95,6 +97,10 @@ class ExpressionChallenge < ApplicationRecord
   elsif self.number == 33
   [
   "When not expressing at their highest, the Destiny Number 33 can over-give, becoming drained and depleted. Without proper boundaries in place, they take on too much responsibility and not enough support. Similarly to Expression 6, this Master Number can take on traits of the typical martyr. With perfectionism and controlling tendencies, they can struggle to let go and allow other people to take some of the strain. And this compounds their inability to express themselves authentically and creatively! Yet if they can let go, learn to embrace a little chaos in their lives and allow others to take care of themselves for a change (are you listening, Destiny Number 33?!) they may just find this is the moment their creativity can shine. With both the number 3 and the number 6 combined in their chart, the person with this numerology can struggle with the duality of finding their own voice, and putting other people first. It’s a tricky line to walk, and there’s no “right way” to do it. Yet with practice, this person will find a way to express their gifts in the world so as to bring their true gifts through, and serve the vision of the New Earth in the process."
+  ]
+  elsif self.number == 0
+  [
+  "Zero as a challenge number doesn’t identify one special challenge that would be more important than others. Any type of challenge can be encountered, but regardless of their type they are meant to guide you to find your strength. This number challenge speaks about your ability to become self-sufficient and independent and whole as a person."
   ]
       end
     end

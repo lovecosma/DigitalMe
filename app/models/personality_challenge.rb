@@ -4,17 +4,17 @@ class PersonalityChallenge < ApplicationRecord
   def short_description
 
    if self.number == 1
-  "You  can doubt yourself and become gloomy. You need to remember the world sees you as capable leaders who make good decisions."
+  "You can doubt yourself and become gloomy. You need to remember the world sees you as capable leaders who make good decisions."
   elsif self.number == 2
-  "Those dealing with the negative attributes of the number 2 personality often suffer from the fear of making a mistake. They fear being alone. They are submissive to others and may have low self-esteem. They are easily exploited. Low confidence levels can make it difficult for number 2s to make a decision. They can become physically ill when trying to make a difficult decision. They must overcome indecisiveness and doubt to fully succeed in life."
+  "Those dealing with the negative attributes of the Personality Challenge number 2 personality challenge often suffer from the fear of making a mistake. They fear being alone. They are submissive to others and may have low self-esteem. They are easily exploited. Low confidence levels can make it difficult for Personality Challenge number 2s to make a decision. They can become physically ill when trying to make a difficult decision. They must overcome indecisiveness and doubt to fully succeed in life."
   elsif self.number == 3
-  "Number 3s do not do well in subordinate roles. Their high level of confidence in themselves makes these roles difficult and they will not excel. They look for power and control in most situation, which can give them an overbearing air at times. Indifference can cloud those with negative personality number 3 traits. There can also be a lack of concentration that will subdue their efforts at success. They tend to procrastinate and have an inability to complete projects they have started.   They can also have a bas jealous streak in personal relationships. While they do tend to have a “lucky streak”, it is often not backed up by the drive and discipline needed to be successful."
+  "Personality Challenge number 3s do not do well in subordinate roles. Their high level of confidence in themselves makes these roles difficult and they will not excel. They look for power and control in most situation, which can give them an overbearing air at times. Indifference can cloud those with negative personality number 3 traits. There can also be a lack of concentration that will subdue their efforts at success. They tend to procrastinate and have an inability to complete projects they have started.   They can also have a bas jealous streak in personal relationships. While they do tend to have a “lucky streak”, it is often not backed up by the drive and discipline needed to be successful."
   elsif self.number == 4
-  "Numerology personality number 4s have a strong distrust of the unknown. They are apt to lost out on opportunities due to their lack of willingness to embrace change. They cannot be hurried in their work. They need to work through each day in a methodical process in order to feel fulfilled. They tend to ask too much of themselves and others. They have no understanding of the fact that others do not fit into their rigid ways of thinking and working."
+  "Personality challenge number 4s have a strong distrust of the unknown. They are apt to lost out on opportunities due to their lack of willingness to embrace change. They cannot be hurried in their work. They need to work through each day in a methodical process in order to feel fulfilled. They tend to ask too much of themselves and others. They have no understanding of the fact that others do not fit into their rigid ways of thinking and working."
   elsif self.number == 5
-  "Number 5s could benefit from some self restraint. They can be reckless. They like to indulge in stimulating their senses with sex, food, alcohol and drugs. This can lead to an addictive personality.   They resent any restrictions being placed upon them, but would do well to learn to exercise self control. The number 5 is known as being rash.   They can be restless and inconsistent. They sometimes take their love of fun to an irresponsible level. They love to learn, but their learning seem to be mostly of a cursory level interest. Number 5s would do well to dig deeper into topics about which they intend to learn in order to be more knowledgeable. The number 5s drive for constant change and movement can make long-term relationships almost impossible. They tend to leave a string of broken hearts in their wake. To escape this, honesty should be at the forefront of personal relationships. Their non-committal tendencies make long term relationships difficult for some."
+  "Personalioty Challenge Number 5s could benefit from some self restraint. They can be reckless. They like to indulge in stimulating their senses with sex, food, alcohol and drugs. This can lead to an addictive personality.   They resent any restrictions being placed upon them, but would do well to learn to exercise self control. The number 5 is known as being rash.   They can be restless and inconsistent. They sometimes take their love of fun to an irresponsible level. They love to learn, but their learning seem to be mostly of a cursory level interest. Number 5s would do well to dig deeper into topics about which they intend to learn in order to be more knowledgeable. The number 5s drive for constant change and movement can make long-term relationships almost impossible. They tend to leave a string of broken hearts in their wake. To escape this, honesty should be at the forefront of personal relationships. Their non-committal tendencies make long term relationships difficult for some."
   elsif self.number == 6
-  "Personality number 6s can have a superiority complex. They tend to apply a station in life to themselves before having achieved that station. They tend to subscribe fully to an organized belief system that limits their vision.   They must learn to think outside of the box in which they are comfortable in order to grow and sustain relationships. Number 6s can have the tendency to be self-righteous and would do well to recognize and squash that trait."
+  "Personality Challenge number 6s can have a superiority complex. They tend to apply a station in life to themselves before having achieved that station. They tend to subscribe fully to an organized belief system that limits their vision.   They must learn to think outside of the box in which they are comfortable in order to grow and sustain relationships. Number 6s can have the tendency to be self-righteous and would do well to recognize and squash that trait."
   elsif self.number == 7
   "Numerology personality number 7s tend to be very opinionated. They seem to know something about everything. Others often find this annoying when attempting to hold a conversation with number 7s. They can be quite cold-hearted and do not understand the plight of others. Personality number 7s would do well to focus on others during personal interactions and to see themselves as others might see them. They tend to be cynical and can be verbally abusive. They tire quickly of the company of others and believe themselves above any disagreements with those they see as “lesser” people.   They tend to be prideful and self-righteous."
   elsif self.number == 8
@@ -27,6 +27,8 @@ class PersonalityChallenge < ApplicationRecord
   "Aimless, sometimes fanatics, big talkers, serve people with an ill will, frustrated, jumpy, indifferent, nervous speakers, angry, aloof, hurtful and a bit moody."
   elsif self.number == 33
   "Burdened by the gift of extreme insight, careless, professionally as well as on a personal level, a craving for sweet substances in order to make up for the perceived sharpness of the world around them."
+  elsif self.number == 0
+  "Zero as a challenge number doesn’t identify one special challenge that would be more important than others. Any type of challenge can be encountered, but regardless of their type they are meant to guide you to find your strength. This number challenge speaks about your ability to become self-sufficient and independent and whole as a person."
   end
 
   end
@@ -34,11 +36,11 @@ class PersonalityChallenge < ApplicationRecord
   def long_description
     if self.number == 1
 [
-"Personality Number 1’s can doubt themselves and become gloomy. They need to remember the world sees them as capable leaders who make good decisions. The person lacks the ability to recognize the needs of anyone else but #{"number 1"}",
+"Personality Challenge Number 1’s can doubt themselves and become gloomy. They need to remember the world sees them as capable leaders who make good decisions. The person lacks the ability to recognize the needs of anyone else but #{"number 1"}",
 
 "While this number can come across as ambitious, its stop-at-nothing attitude can also make it seem uncaring or domineering as it pushes its way forward. More physical than spiritual, it doesn't need anyone else's help and is too focused on its own pursuits to even realize when it's made an offense. Softer energies of cooperation and patience get shoved aside in the interest of movement and progress.",
 
-"The number 1 would call itself fearless, but a lack of foresight can all-too-easily lead it into trouble that could have been avoided. Tunnel vision and an extreme sense of invincibility makes the 1 so focused on the path before it that it can miss the warning signs in its peripheral vision.",
+"The Personality Challenge number 1 would call itself fearless, but a lack of foresight can all-too-easily lead it into trouble that could have been avoided. Tunnel vision and an extreme sense of invincibility makes the 1 so focused on the path before it that it can miss the warning signs in its peripheral vision.",
 
 "With such an extreme drive to accomplish and succeed, self-doubt is this number's Achilles heel. Though it won't show it on the outside, the number 1 harbors a deep fear of making mistakes or coming up short of its goal. It takes even minor criticism to heart but will ultimately use it as motivation to improve."
 ]
@@ -46,9 +48,9 @@ class PersonalityChallenge < ApplicationRecord
     elsif self.number == 2
 
 [
-"Number 2s in the negative can be very pessimistic.   Small things have a larger effect on a number 2 than on other personality numbers. They must take caution to not lose hope over the small things. There is a tendency toward laziness. Laziness will keep number 2s from realizing their full potential. They have an inability to perform routine work. This leads to a insecurity of wealth. They must learn to back their creativity with a solid work ethic. Numerology number 2 personalities can suffer from stomach and digestive issues. These can be related to the nervousness caused by decision making. Nervous system issues and insomnia are also common in number 2 personalities.",
+"Personality Challenge 2s in the negative can be very pessimistic.   Small things have a larger effect on a Personality Challenge Personality Challenge number 2 than on other personality numbers. They must take caution to not lose hope over the small things. There is a tendency toward laziness. Laziness will keep Personality Challenge number 2s from realizing their full potential. They have an inability to perform routine work. This leads to a insecurity of wealth. They must learn to back their creativity with a solid work ethic.  Challenge Personality Challenge number 2 personalities can suffer from stomach and digestive issues. These can be related to the nervousness caused by decision making. Nervous system issues and insomnia are also common in Personality Challenge number 2 personality challenges.",
 
-"In an effort to always stay in the middle, the number 2 has a hard time seeing biases which makes it difficult to make decisions both large and small. When a preference cannot be identified one way or another, this number gets stuck in inaction. The drive to instill harmony within itself and with others is so strong that even the slightest irk or insult can throw the number 2 off balance and into a world of hurt. There are very sensitive energies here. After everything it puts into creating unity, anything that threatens or works against these efforts feels especially painful to the 2. The number 2 will put its own needs aside in order to keep the peace. More passive than assertive, it may stay in an unpleasant situation far too long, quietly struggling to make it better on its own instead of being more direct and efficient in its actions. It will often choose its current experience over a new and different path.",
+"In an effort to always stay in the middle, the Personality Challenge Personality Challenge number 2 has a hard time seeing biases which makes it difficult to make decisions both large and small. When a preference cannot be identified one way or another, this number gets stuck in inaction. The drive to instill harmony within itself and with others is so strong that even the slightest irk or insult can throw the Personality Challenge number 2 off balance and into a world of hurt. There are very sensitive energies here. After everything it puts into creating unity, anything that threatens or works against these efforts feels especially painful to the 2. The Personality Challenge number 2 will put its own needs aside in order to keep the peace. More passive than assertive, it may stay in an unpleasant situation far too long, quietly struggling to make it better on its own instead of being more direct and efficient in its actions. It will often choose its current experience over a new and different path.",
 
 "This type might be jealous and one track minded - unable to focus on anything but a partner."
 ]
@@ -105,7 +107,7 @@ class PersonalityChallenge < ApplicationRecord
 
 "Despite being popular and outgoing, you often find yourself feeling incredibly lonely. No one truly understands you or how it feels to walk in your shoes. You are expected to be the pillar of strength at all times. People rely on you. Numerology Personality Number 8 represents strength and determination. You know what you want and nothing will stop you from getting it. Just be sure you take some time to relax and appreciate the things you already have.",
 
-"The Personality Challenge 8 likes to revel in its accomplishments by surrounding itself with nice things. It looks at this as a personal reward and a way to rebalance the cycle of manifestation. Unfortunately, to others this trait can make the 8 appear shallow or like a show-off. It may also attract opportunists who misunderstand the 8's intentions. It's no surprise all this accomplishment goes straight to the number 8's head. It's used to being a leader and this gives it a feeling of personal power. But the 8 always assumes its way is the right way and, by dismissing others' opinions and ignoring their efforts, it may lose their support even faster than it gained it. The 8 in Numerology isn't about to ask for permission or forgiveness. Its need to succeed can make it blind to rules and processes, but ignoring these limits and taking things into its own hands makes teamwork impossible and drives a wedge in partnerships. The number 8 is so used to getting its way that it now expects it."
+"The Personality Challenge 8 likes to revel in its accomplishments by surrounding itself with nice things. It looks at this as a personal reward and a way to rebalance the cycle of manifestation. Unfortunately, to others this trait can make the 8 appear shallow or like a show-off. It may also attract opportunists who misunderstand the 8's intentions. It's no surprise all this accomplishment goes straight to the number 8's head. It's used to being a leader and this gives it a feeling of personal power. But the 8 always assumes its way is the right way and, by dismissing others' opinions and ignoring their efforts, it may lose their support even faster than it gained it. The 8 in Numerology isn't about to ask for permission or forgiveness. Its need to succeed can make it blind to rules and processes, but ignoring these limits and taking things into its own hands makes teamwork impossible and drives a wedge in partnerships. The number 8 is so used to getting its way that it now expects it.",
 
 "The Personality Challenge 8 is just not that interested in relationships or intimacy and may even see emotions as destructive to survival."
 ]
@@ -130,24 +132,12 @@ class PersonalityChallenge < ApplicationRecord
 "Your anxiety is a product of your thoughts. Try meditation to clear your mind and take control of your destructive thought patterns. Try spending some time each day doing things to naturally cure your anxiety. Personality challenge number 11 makes you a caring and sensitive person. You are very much loved and appreciated by your friends and family. Learn to step outside of your comfort zone and life will only get better."
 ]
 
-  elsif self.number == 22
+elsif self.number == 0
 [
-
-
-
-
-
-
-
-
-
+"Zero as a challenge number doesn’t identify one special challenge that would be more important than others. Any type of challenge can be encountered, but regardless of their type they are meant to guide you to find your strength. This number challenge speaks about your ability to become self-sufficient and independent and whole as a person."
 ]
-  elsif self.number == 33
+elsif self.number == 33
 [
-
-
-
-
 
 ]
       end

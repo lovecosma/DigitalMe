@@ -1,0 +1,4 @@
+<h1>All Charts</h1>
+<% @charts.each do |s| %>
+ <h3><%= link_to "#{s.full_name}", chart_path(s) %></h3>
+<% end %>
