@@ -34,6 +34,24 @@ class ChartsController < ApplicationController
     set_chart
   end
 
+  def edit
+    set_chart
+  end
+
+  def update
+    set_chart
+    @chart.update(chart_params)
+    if @chart.save
+      redirect_to chart_path(@chart)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+      set_chart.destroy
+      redirect_to charts_path
+    end
 
 
 private

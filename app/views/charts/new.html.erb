@@ -1,12 +1,2 @@
 <h1>Create Chart</h1>
-<%= form_for @chart do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br>
-  <%= f.label :middle_name %>
-  <%= f.text_field :middle_name %><br>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br>
-  <%= f.label :birthdate %>
-  <%= f.date_field :birthdate %>
-  <%= f.submit "Create Chart" %>
-<% end  %>
+<%= render partial: "form", locals: {chart: @chart, button_name: "Create Chart"}%>

@@ -1,26 +1,30 @@
 <div class="">
   <h1><%= @chart.full_name %></h1>
   <h3><%= "#{@chart.month}/#{@chart.day}/#{@chart.year} " %></h3>
+  <h4><%= link_to "edit", edit_chart_path(@chart) %></h4>
+  <%= form_tag chart_path(@chart.id), method: "delete" do %>
+  <%= submit_tag "Delete" %>
+<% end %>
 </div>
 <br>
 <div>
-  <h2><%= link_to "Birthday Number: #{@chart.birthday_number}", birthday_path(@chart.birthday) %></h2>
+  <h2><%= link_to "Birthday Number #{@chart.birthday_number}", birthday_path(@chart.birthday) %></h2>
   <p><%= @chart.birthday.short_description %></p>
 </div>
 <div class="">
-  <h2><%= link_to "Life Path Number: #{@chart.life_path_number}", life_path_path(@chart.life_path) %></h2>
+  <h2><%= link_to "Life Path Number #{@chart.life_path_number}", life_path_path(@chart.life_path) %></h2>
   <p><%= @chart.life_path.short_description %></p>
 </div>
 <div class="">
-  <h2><%= link_to "Soul Urge Number: #{@chart.soul_urge_number}", soul_urge_path(@chart.soul_urge) %></h2>
+  <h2><%= link_to "Soul Urge Number #{@chart.soul_urge_number}", soul_urge_path(@chart.soul_urge) %></h2>
   <p><%= @chart.soul_urge.short_description %></p>
 </div>
 <div class="">
-  <h2><%= link_to "Soul Urge Challenge Number: #{@chart.soul_urge_challenge_number}", soul_urge_challenge_path(@chart.soul_urge_challenge) %></h2>
+  <h2><%= link_to "Soul Urge Challenge Number #{@chart.soul_urge_challenge_number}", soul_urge_challenge_path(@chart.soul_urge_challenge) %></h2>
   <p><%= @chart.soul_urge_challenge.short_description %></p>
 </div>
 <div class="">
-  <h2><%= link_to "Expression Number: #{@chart.expression_number}", expression_path(@chart.expression) %></h2>
+  <h2><%= link_to "Expression Number #{@chart.expression_number}", expression_path(@chart.expression) %></h2>
   <p><%= @chart.expression.short_description %></p>
 </div>
 <div class="">
@@ -28,7 +32,7 @@
   <p><%= @chart.expression_challenge.short_description %></p>
 </div>
 <div class="">
-  <h2><%= link_to "Personality Number: #{@chart.personality_number}", personality_path(@chart.personality) %> </h2>
+  <h2><%= link_to "Personality Number #{@chart.personality_number}", personality_path(@chart.personality) %> </h2>
   <p><%= @chart.personality.short_description %></p>
 </div>
 <div class="">
