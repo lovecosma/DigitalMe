@@ -21,7 +21,7 @@
       <% else %>
       <%= link_to "Your Charts", user_charts_path(current_user) %><br>
       <%= link_to "Create New Chart", new_user_chart_path(current_user) %><br>
-      <%= "Hi, #{current_user.first_name}" %><%="    "%><%= link_to "(Not you?)", logout_path, method: "delete" %><br>
+      <%= "Hi, #{current_user.username}" %><%="    "%><%= link_to "(Not you?)", logout_path, method: "delete" %><br>
       <% end %>
     </nav>
     <%= yield %>

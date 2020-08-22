@@ -8,8 +8,17 @@ class User < ApplicationRecord
   has_many :expression_challenges, through: :charts
   has_many :personalities, through: :charts
   has_many :personality_challenges, through: :charts
-  validates_presence_of :email
+  validates :username, presence: true, uniqueness: true
   validates_presence_of :password_digest
-  validates_uniqueness_of :email
   has_secure_password
+
+
+  def self.find_or_create_from_omniauth(user_info)
+    User.find_or_create_by(uid: user_info["uid"]) do |u|
+        u.username = user_info["info"]["nickname"]
+        u.password = SecureRandom.hex
+    end
+  end
+
+
 end
