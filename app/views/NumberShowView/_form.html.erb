@@ -4,12 +4,12 @@
   </div>
   <br>
   <div class="">
-    <%= object.short_description %>
+    <p class="flow-text"><%= object.short_description %></p>
   </div>
   <br>
   <% object.long_description.each do |d| %>
     <div class="">
-      <p> <%= d %> </p>
+      <p class="flow-text"> <%= d %> </p>
     </div>
   <% end %>
 </div>

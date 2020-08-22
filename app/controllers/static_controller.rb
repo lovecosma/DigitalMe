@@ -4,4 +4,8 @@ class StaticController < ApplicationController
 
   end
 
+  def life_path_number_info
+
+  end
+
 end
