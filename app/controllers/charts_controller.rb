@@ -21,11 +21,10 @@ class ChartsController < ApplicationController
     @chart.expression_challenge = ExpressionChallenge.find_by(number: @chart.expression_challenge_number)
     @chart.personality = Personality.find_by(number: @chart.personality_number)
     @chart.personality_challenge = PersonalityChallenge.find_by(number: @chart.personality_challenge_number)
-
+    @chart.save!
     if @chart.save
       redirect_to user_chart_path(current_user, @chart)
     else
-      binding.pry
       render :new
     end
 

@@ -14,8 +14,7 @@ class Chart < ApplicationRecord
     message: "only allows letters" }
   validates :last_name, presence: true, format: { with: /\A[a-zA-Z]+\z/,
     message: "only allows letters" }
-  validates :birthdate, presence: true, format: { with: /\A[a-zA-Z]+\z/,
-    message: "only allows letters" } 
+  validates :birthdate, presence: true
 
   PYTHAG_ALPHA = [
   ['A', 1], ['J', 10], ['S', 19],
