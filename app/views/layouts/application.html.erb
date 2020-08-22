@@ -11,9 +11,9 @@
 
   <body>
     <nav>
-      <div class="nav-wrapper  deep-orange darken-4">
+      <div class="nav-wrapper  indigo accent-4">
           <!-- Neuatral Links -->
-          <a class="brand-logo left" href="/">NumerologyChartMaker</a>
+          <a class="brand-logo left" href="/">Digital Me  ｡^‿^｡</a>
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <!-- Logged Out -->
@@ -22,7 +22,7 @@
             <li><%= link_to "Sign up", signup_path %></li>
             <!-- Logged In -->
             <% else %>
-            <li><%= link_to "Your Charts", user_charts_path(current_user) %></li>
+            <li><%= link_to "Your Charts ∞", user_charts_path(current_user) %></li>
             <li><%= link_to "Create New Chart", new_user_chart_path(current_user) %></li>
             <% end %>
           </ul>
@@ -30,7 +30,7 @@
     </nav>
     <div>
       <% if logged_in? %>
-      <%= "Hi, #{current_user.username}" %><%="    "%><%= link_to "(Not you?)", logout_path, method: "delete" %>
+      <%= "Hi, #{current_user.username}" %><%="    "%><%= link_to "(logout)", logout_path, method: "delete" %>
       <% end %>
     </div>
     <%= yield %>

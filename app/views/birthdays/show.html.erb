@@ -1,15 +1,1 @@
-<div class="container">
-  <div class="white-text wrapper deep-orange darken-4">
-      <h1> Birthday Number <%= @birthday.number %> </h1>
-  </div>
-  <br>
-  <div class="">
-    <%= @birthday.short_description %>
-  </div>
-  <br>
-  <% @birthday.long_description.each do |d| %>
-    <div class="">
-      <p> <%= d %> </p>
-    </div>
-  <% end %>
-</div>
+<%= render partial: "NumberShowView/form", locals: {object: @birthday, objectName:"Birthday Number"}%>

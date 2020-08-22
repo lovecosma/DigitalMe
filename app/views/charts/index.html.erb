@@ -1,5 +1,5 @@
 <div">
-  <h1>Your Charts</h1>
+  <h1>Your Charts ∞</h1>
 
   <table style="width:100%">
     <tr>
@@ -17,7 +17,7 @@
     <% @charts.each do |c| %>
       <tr>
         <br>
-        <td > <%=link_to c.full_name, user_chart_path(current_user, c)%> <br> <%= link_to "edit", edit_user_chart_path(current_user, c) %> <%= link_to "delete", user_chart_path(current_user, c), method: "delete"%></td>
+        <td > <%= c.full_name %> <%= link_to "~", user_chart_path(current_user, c)%> <br> <%= link_to "edit", edit_user_chart_path(current_user, c) %> <%= link_to "delete", user_chart_path(current_user, c), method: "delete"%></td>
         <td><%= c.birthday_number %></td>
         <td> <%= c.life_path_number %> </td>
         <td> <%= c.soul_urge_number %> </td>
