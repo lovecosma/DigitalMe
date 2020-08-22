@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :personalities, through: :charts
   has_many :personality_challenges, through: :charts
   validates :username, presence: true, uniqueness: true
-  validates :password_digest, length: { in: 6..20 }, presence: true
+  validates :password_digest, presence: true
   has_secure_password
 
 

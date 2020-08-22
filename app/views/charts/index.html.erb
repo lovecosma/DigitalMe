@@ -1,31 +1,33 @@
-<h1>Your Charts</h1>
+<div>
+  <h1>Your Charts</h1>
 
-<table style="width:100%" >
-  <tr>
-    <th>Name</th>
-    <th>Birthday</th>
-    <th>Life Path</th>
-    <th>Soul Urge</th>
-    <th>Soul Urge <br> Challenge</th>
-    <th>Expression</th>
-    <th>Expression <br> Challenge</th>
-    <th>Personality</th>
-    <th>Personality <br> Challenge</th>
-  </tr>
-
-  <% @charts.each do |c| %>
+  <table style="width:100%">
     <tr>
-      <br>
-      <td > <%=c.full_name%> <br> <%= link_to "edit", edit_user_chart_path(current_user, c) %> <%= link_to "delete", user_chart_path(current_user, c), method: "delete"%></td>
-      <td><%= c.birthday_number %></td>
-      <td> <%= c.life_path_number %> </td>
-      <td> <%= c.soul_urge_number %> </td>
-      <td> <%= c.soul_urge_challenge_number %> </td>
-      <td> <%= c.expression_number %> </td>
-      <td> <%= c.expression_challenge_number %> </td>
-      <td> <%= c.personality_number %> </td>
-      <td> <%= c. personality_challenge_number %> </td>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Life Path</th>
+      <th>Soul Urge</th>
+      <th>Soul Urge <br> Challenge</th>
+      <th>Expression</th>
+      <th>Expression <br> Challenge</th>
+      <th>Personality</th>
+      <th>Personality <br> Challenge</th>
     </tr>
-  <% end %>
 
-</table>
+    <% @charts.each do |c| %>
+      <tr>
+        <br>
+        <td > <%=link_to c.full_name, user_chart_path(current_user, c)%> <br> <%= link_to "edit", edit_user_chart_path(current_user, c) %> <%= link_to "delete", user_chart_path(current_user, c), method: "delete"%></td>
+        <td><%= c.birthday_number %></td>
+        <td> <%= c.life_path_number %> </td>
+        <td> <%= c.soul_urge_number %> </td>
+        <td> <%= c.soul_urge_challenge_number %> </td>
+        <td> <%= c.expression_number %> </td>
+        <td> <%= c.expression_challenge_number %> </td>
+        <td> <%= c.personality_number %> </td>
+        <td> <%= c. personality_challenge_number %> </td>
+      </tr>
+    <% end %>
+
+  </table>
+</div>

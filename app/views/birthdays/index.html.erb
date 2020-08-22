@@ -1,7 +1,7 @@
 <% @birthdays.each do |b| %>
-<div class="">
+<div class="container" >
   <h3> <%= link_to "Birthday Number #{b.number}", birthday_path(b) %></h3>
-  <p><%= b.short_description %></p>
+  <p class="flow-text" ><%= b.short_description %></p>
 </div>
 
 <% end %>
