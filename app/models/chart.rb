@@ -8,10 +8,14 @@ class Chart < ApplicationRecord
   belongs_to :expression_challenge
   belongs_to :personality
   belongs_to :personality_challenge
-  validates_presence_of :first_name
-  validates_presence_of :middle_name
-  validates_presence_of :last_name
-  validates_presence_of :birthdate
+  validates :first_name, presence: true, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" }
+  validates :middle_name, presence: true, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" }
+  validates :last_name, presence: true, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" }
+  validates :birthdate, presence: true, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" } 
 
   PYTHAG_ALPHA = [
   ['A', 1], ['J', 10], ['S', 19],

@@ -7,23 +7,31 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material\Icons" rel="stylesheet">
   </head>
 
   <body>
     <nav>
-      <!-- Neuatral Links -->
-      <a href="/">Home</a><br>
-      <!-- Logged Out -->
-      <% if !logged_in? %>
-      <%= link_to "Login", login_path %><br>
-      <%= link_to "Sign up", signup_path %><br>
-      <!-- Logged In -->
-      <% else %>
-      <%= link_to "Your Charts", user_charts_path(current_user) %><br>
-      <%= link_to "Create New Chart", new_user_chart_path(current_user) %><br>
-      <%= "Hi, #{current_user.username}" %><%="    "%><%= link_to "(Not you?)", logout_path, method: "delete" %><br>
-      <% end %>
+      <div class="nav-wrapper">
+          <!-- Neuatral Links -->
+          <a class="brand-logo left" href="/">NumerologyChartMaker</a>
+
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- Logged Out -->
+            <% if !logged_in? %>
+            <li><%= link_to "Login", login_path %></li>
+            <li><%= link_to "Sign up", signup_path %></li>
+            <!-- Logged In -->
+            <% else %>
+            <li><%= link_to "Your Charts", user_charts_path(current_user) %></li>
+            <li><%= link_to "Create New Chart", new_user_chart_path(current_user) %></li>
+            <% end %>
+          </ul>
+      </div>
     </nav>
+    <% if logged_in? %>
+    <%= "Hi, #{current_user.username}" %><%="    "%><%= link_to "(Not you?)", logout_path, method: "delete" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
