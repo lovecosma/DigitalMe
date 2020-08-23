@@ -1,11 +1,12 @@
 <div>
   <h1>Your Charts ∞</h1>
 
-  <%= form_tag(user_charts_path, method: 'get')do %>
-    <%= label_tag("Search")%>
-    <%= text_field_tag :name, nil, id:"Search" %>
-    <%= submit_tag "Search" %>
-  <% end %>
+  <div class="container left">
+    <%= form_tag(user_charts_path, method: 'get')do %>
+      <%= text_field_tag :name, nil, id:"Search", placeholder: "enter a name" %>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </div>
 
   <table style="width:100%">
     <tr>

@@ -17,7 +17,16 @@ class ChartsController < ApplicationController
   def create
     @chart = Chart.new
     @chart = current_user.charts.build(chart_params)
-    if @chart.valid?
+      @chart.birthday = Birthday.find_by(number: 44)
+      @chart.life_path = LifePath.find_by(number: 44)
+      @chart.soul_urge = SoulUrge.find_by(number: 44)
+      @chart.soul_urge_challenge = SoulUrgeChallenge.find_by(number: 44)
+      @chart.expression = Expression.find_by(number: 44)
+      @chart.expression_challenge = ExpressionChallenge.find_by(number: 44)
+      @chart.personality = Personality.find_by(number: 44)
+      @chart.personality_challenge = PersonalityChallenge.find_by(number: 44)
+      @chart.valid?
+    if @chart.save
       @chart.birthday = Birthday.find_by(number: @chart.birthday_number)
       @chart.life_path = LifePath.find_by(number: @chart.life_path_number)
       @chart.soul_urge = SoulUrge.find_by(number: @chart.soul_urge_number)
@@ -26,8 +35,7 @@ class ChartsController < ApplicationController
       @chart.expression_challenge = ExpressionChallenge.find_by(number: @chart.expression_challenge_number)
       @chart.personality = Personality.find_by(number: @chart.personality_number)
       @chart.personality_challenge = PersonalityChallenge.find_by(number: @chart.personality_challenge_number)
-    end
-    if @chart.save
+      @chart.save!
       redirect_to user_chart_path(current_user, @chart)
     else
       render :new
