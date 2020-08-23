@@ -8,4 +8,20 @@
   <%= f.label :birthdate %>
   <%= f.date_field :birthdate %>
   <%= f.submit button_name %>
+  <div class="red-text container flow-text">
+    <% if chart.errors.any? %>
+      <div id="error_explanation">
+        <h6>
+          <%= pluralize(chart.errors.count, "error") %>
+          prohibited this chart from being saved:
+        </h6>
+
+        <ul>
+        <% chart.errors.full_messages.each do |msg| %>
+          <li><h6>* <%= msg %></h6></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 <% end  %>

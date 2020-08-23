@@ -9,6 +9,22 @@
     <%= f.label :password %><br>
     <%= f.password_field :password %><br><br>
     <%= f.submit "signup"%>
+    <div class="red-text container flow-text">
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h6>
+            <%= pluralize(@user.errors.count, "error") %>
+            prohibited this user from being saved:
+          </h6>
+
+          <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><h6>* <%= msg %></h6></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
     <% end %>
   </div>
 
