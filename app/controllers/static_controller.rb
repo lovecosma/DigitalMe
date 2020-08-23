@@ -8,4 +8,29 @@ class StaticController < ApplicationController
 
   end
 
+  def soul_urge_info
+
+  end
+
+  def soul_urge_challenge_info
+
+  end
+
+  def expression_info
+
+  end
+
+  def expression_challenge_info
+
+  end
+
+  def personality_info
+
+  end
+
+  def personality_challenge_info
+
+  end
+
+
 end
