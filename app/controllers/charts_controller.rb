@@ -1,7 +1,11 @@
 class ChartsController < ApplicationController
 
   def index
+    if params[:name]
+    @charts = Chart.search(params[:name])
+  else
     @charts = Chart.all
+  end
   end
 
 

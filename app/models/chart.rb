@@ -15,7 +15,7 @@ class Chart < ApplicationRecord
   validates :last_name, presence: true, format: { with: /\A[a-zA-Z]+\z/,
     message: "only allows letters" }
   validates :birthdate, presence: true
-   scope :birthday_number_filter, -> (number) { where(birthday_number: number) }
+   scope :search, -> (name) { where("first_name LIKE ?", "%#{name}%") }
 
   PYTHAG_ALPHA = [
   ['A', 1], ['J', 10], ['S', 19],
