@@ -17,6 +17,8 @@ class Chart < ApplicationRecord
   validates :birthdate, presence: true
    scope :search, -> (name) { where("first_name LIKE ?", "%#{name}%") }
 
+
+
   PYTHAG_ALPHA = [
   ['A', 1], ['J', 10], ['S', 19],
   ['B', 2], ['K', 11], ['T', 20],
@@ -28,6 +30,8 @@ class Chart < ApplicationRecord
   ['H', 8], ['Q', 17], ['Z', 26],
   ['I', 9], ['R', 18]
 ]
+
+
 
   def full_name
     self.first_name + " " + self.middle_name + " " + self.last_name
