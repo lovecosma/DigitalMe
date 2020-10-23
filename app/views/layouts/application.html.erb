@@ -7,13 +7,31 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material\Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+    .App{
+      padding: 50px;
+    }
+    html{
+      font-family: 'Comfortaa', cursive;
+    }
+    h1,h2,h3,h45,h6,p,li,img{
+    margin-left: 25px;
+    margin-right: 25px
+    margin-bottom: 30px
+    margin-top: 25px
+
+
+    }
+    </style>
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper deep-purple">
+  <div>
+    <nav class="nav-wrapper container deep-purple App">
+    <a class="brand-logo center" href="/">Digital Me</a>
+    <div class="nav-wrapper container deep-purple right">
           <!-- Neuatral Links -->
-          <a class="brand-logo left" href="/">Digital Me  ｡^‿^｡</a>
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <!-- Logged Out -->
@@ -24,15 +42,17 @@
             <% else %>
             <li><%= link_to "Your Charts ∞", user_charts_path(current_user) %></li>
             <li><%= link_to "Create New Chart +", new_user_chart_path(current_user) %></li>
+            <li><%= link_to "Logout", logout_path, method: "delete"%></li>
             <% end %>
           </ul>
-      </div>
-    </nav>
-    <div>
-      <% if logged_in? %>
-      <%= "Hi, #{current_user.username}" %><%="    "%><%= link_to "(logout)", logout_path, method: "delete" %>
-      <% end %>
-    </div>
+          </div>
+          </nav>
+          <div class="container white">
+            <% if logged_in? %>
+            <%= "Hi, #{current_user.username}" %><%="    "%><%= link_to "(logout)", logout_path, method: "delete" %>
+            <% end %>
+          </div>
     <%= yield %>
+    </div>
   </body>
 </html>

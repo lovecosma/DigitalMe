@@ -1,27 +1,28 @@
-<div class="container">
+<div class="container white">
   <div class="white-text wrapper deep-purple">
-    <h2>Welcome to Digital Me ｡^‿^｡ the Numerology Chart Collector</h2>
+    <h2>Welcome to Digital Me, the Numerology Chart Collector</h2>
   </div>
-
-
-
-      <div class="split left"><%= image_tag "numerology-universe.jpg", :width => 700 %></div>
-      <div class="split right">
-          <div class="split left">
-            <ul>
-            <li><h5><%= link_to "~ Birthday Number Meaning ~", birthday_info_path %></h5></li>
-            <li><h5><%= link_to "~ Life Path Number Meaning ~", life_path_info_path %></h5></li>
-            <li><h5> <%= link_to "~ Soul Urge Number Meaning ~", soul_urge_info_path %></h5></li>
-            <li><h5> <%= link_to "~ Soul Urge Challenge Number ~", soul_urge_challenge_info_path %></h5></li>
-            <li><h5><%= link_to "~ Expression Number Meaning ~", expression_info_path %></h5></li>
-            <li><h5><%= link_to "~ Expression Challenge Number ~", expression_challenge_info_path %></h5></li>
-            <li><h5><%= link_to "~ Personality Number Meaning ~", personality_info_path %></h5></li>
-            <li><h5><%= link_to "~ Personality Challenge Number ~", personality_challenge_info_path %></h5></li>
-          </ul>
+</div>
+      <div class="container" style="display: flex">
+          <div class="center" style="flex: center">
+          <%= image_tag "numerology-universe.jpg", :width => "95%", :height => "95%" %>
+          </div>
+          <div style="flex: left">
+          <ul style="padding: 15px">
+          <li><h5>Overview of Nuymber Meanings</h5></li>
+          <li><h5><%= link_to "Birthday Number Meaning", birthday_info_path %></h5></li>
+          <li><h5><%= link_to "Life Path Number Meaning", life_path_info_path %></h5></li>
+          <li><h5> <%= link_to "Soul Urge Number Meaning", soul_urge_info_path %></h5></li>
+          <li><h5> <%= link_to "Soul Urge Challenge Number", soul_urge_challenge_info_path %></h5></li>
+          <li><h5><%= link_to "Expression Number Meaning", expression_info_path %></h5></li>
+          <li><h5><%= link_to "Expression Challenge Number", expression_challenge_info_path %></h5></li>
+          <li><h5><%= link_to "Personality Number Meaning", personality_info_path %></h5></li>
+          <li><h5><%= link_to "Personality Challenge Number", personality_challenge_info_path %></h5></li>
+        </ul>
           </div>
       </div>
 
-
+  <div class="container">
     <div class= "left">
     <div class="white-text wrapper deep-purple">
       <h3>What is Numerology</h3>
