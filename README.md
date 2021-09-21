@@ -14,7 +14,7 @@ Numerology is seen as a universal language of numbers.
   - Personality Number 
   - Personality Challenge Number
 
-# Have fun pondering the mystery of the numbers :-)
+# Have fun pondering the mystery of the numbers
 
 Login and store multiple charts.
 
