@@ -1,24 +1,43 @@
-# README
+# This is DigitalMe, a numerology chart calculator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# In simple terms, numerology is a study of numbers in your life. You can uncover information about the world and also each individual person by using Numerology. 
+# Numerology is seen as a universal language of numbers.
 
-Things you may want to cover:
+# With this application, you can calculate your:
 
-* Ruby version
+  - Birthday Number
+  - Life Path Number
+  - Soul Urge Number
+  - Soul Urge Challenge Number
+  - Expression Number
+  - Expression Challenge Number
+  - Personality Number 
+  - Personality Challenge Number
 
-* System dependencies
+# You can login and store multiple charts.
 
-* Configuration
+# Have fun pondering the mystery of the numbers :-)
 
-* Database creation
 
-* Database initialization
+# How to use locally:
 
-* How to run the test suite
+- Fork and clone this repository
+- Run bundle install
+- Run rails db:migrate
+- Run rails s to start server
+- Visit localhost:3000/
+- Sign up and begin creating charts!
 
-* Services (job queues, cache servers, search engines, etc.)
+# Visit heroku deploy:
 
-* Deployment instructions
+- https://digital-me.herokuapp.com/
 
-* ...
+# Key technology:
+
+Ruby on Rails - scalable and secure web framework utilizing MVC architecture 
+bcrypt - password-hashing function for user authentication
+omniauth - standardized multi-provider authentication for Facebook login
+postgresql - SQL compliant relational database management system
+activerecord - object relational mapping library 
+
+
