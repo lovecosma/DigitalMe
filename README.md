@@ -34,10 +34,10 @@
 
 # Key technology:
 
-Ruby on Rails - scalable and secure web framework utilizing MVC architecture 
-bcrypt - password-hashing function for user authentication
-omniauth - standardized multi-provider authentication for Facebook login
-postgresql - SQL compliant relational database management system
-activerecord - object relational mapping library 
+- Ruby on Rails - scalable and secure web framework utilizing MVC architecture 
+- bcrypt - password-hashing function for user authentication
+- omniauth - standardized multi-provider authentication for Facebook login
+- postgresql - SQL compliant relational database management system
+- activerecord - object relational mapping library 
 
 
