@@ -1,7 +1,7 @@
 # This is DigitalMe, a numerology chart calculator
 
-# In simple terms, numerology is a study of numbers in your life. You can uncover information about the world and also each individual person by using Numerology. 
-# Numerology is seen as a universal language of numbers.
+In simple terms, numerology is a study of numbers in your life. You can uncover information about the world and also each individual person by using Numerology. 
+Numerology is seen as a universal language of numbers.
 
 # With this application, you can calculate your:
 
@@ -14,10 +14,9 @@
   - Personality Number 
   - Personality Challenge Number
 
-# You can login and store multiple charts.
-
 # Have fun pondering the mystery of the numbers :-)
 
+Login and store multiple charts.
 
 # How to use locally:
 
